@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% load mathfilters %}
+    <div class="home">
+        
+
+        <div class="greet">
+            <h1>Welcome to the Home Page!</h1>
+            <p> The Date and Time currently is, {{ current_time }}</p>
+        </div>
+        <div class="weather">
+            <h2>Current Weather at New Delhi: </h2>
+            <p>Temperature: {{ weather_data.main.temp|addition:-273.15| floatformat:2  }}°C</p>
+            <p>Weather: {{ weather_data.weather.0.description }}</p>
+        </div>
+       
+
+        <div class="quoteBlock">"{{ random_quote }}"</div>   
+    </div>
+{% endblock %}

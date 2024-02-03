@@ -1,0 +1,14 @@
+<!-- success.html -->
+{% extends 'index.html' %}
+
+{% block content %}
+    <div class="sucCon">
+        <h2>Form Submitted Successfully!</h2>
+        <p>Thank you for submitting the form.</p>
+        <button>
+            <a href="{% url 'user_data' %}">Go back to the form</a>
+        </button>
+        
+    </div>
+    
+{% endblock %}

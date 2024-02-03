@@ -1,0 +1,34 @@
+<!-- display_data.html -->
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="tablecon">
+    <h2>User Data Display</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Country</th>
+                <th>Bio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user_data in user_data_list %}
+            <tr>
+                <td>{{ user_data.name }}</td>
+                <td>{{ user_data.email }}</td>
+                <td>{{ user_data.age }}</td>
+                <td>{{ user_data.gender }}</td>
+                <td>{{ user_data.country }}</td>
+                <td>{{ user_data.bio }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

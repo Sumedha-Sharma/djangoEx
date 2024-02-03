@@ -1,0 +1,15 @@
+# .gitignore
+
+# Virtual environment
+venv/
+
+# Django-specific
+*.pyc
+__pycache__/
+db.sqlite3
+.DS_Store
+
+# Local development settings
+.env
+.env.local
+

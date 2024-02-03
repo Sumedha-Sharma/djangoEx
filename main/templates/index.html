@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Your Website{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="title">
+            Example.com
+        </div>
+        <nav>
+            <!-- Your navigation menu goes here -->
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'user_data' %}">Form</a></li>
+                <li><a href="{% url 'display' %}">Display</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Your Website</p>
+            <p>Dummy Address, City</p>
+            <p>Email: dummy@example.com</p>
+        </div>
+    </footer>
+
+    <!-- Add your JavaScript scripts or links here -->
+</body>
+</html>

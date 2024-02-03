@@ -1,0 +1,49 @@
+<!-- user_form.html -->
+{% extends 'index.html' %}
+
+{% block content %}
+    <div class="formCon">
+        <h2>User Form</h2>
+        <form method="post" action="{% url 'user_data' %}">
+            {% csrf_token %}
+
+            <div class="form-group">
+                {{ form.name.label_tag }}
+                {{ form.name }}
+            </div>
+    
+            <div class="form-group">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+    
+            <div class="form-group">
+                {{ form.age.label_tag }}
+                {{ form.age }}
+            </div>
+    
+            <div class="form-group">
+                {{ form.gender.label_tag }}
+                {{ form.gender }}
+            </div>
+    
+            <div class="form-group">
+                {{ form.country.label_tag }}
+                {{ form.country }}
+            </div>
+    
+            <div class="form-group">
+                {{ form.bio.label_tag }}
+                {{ form.bio }}
+            </div>
+    
+            <div class="button">
+                <button type="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
+
+
+    </div>
+    
+{% endblock %}
+
